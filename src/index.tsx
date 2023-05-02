@@ -7,15 +7,21 @@ import Home from './Home';
 import Counter from './Counter';
 import APIData from './APIData';
 import MyUser from './MyUser';
+import { StyledEngineProvider } from '@mui/material/styles';
+import MyDisplay from './MyDisplay';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <APIData />
+    <StyledEngineProvider injectFirst>
+    <MyDisplay />
     <Counter/>
     <MyUser/>
+
+    </StyledEngineProvider>
+   
   </React.StrictMode>
 );
 
