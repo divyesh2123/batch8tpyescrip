@@ -17,9 +17,7 @@ root.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
     <MyDisplay />
-    <Counter/>
-    <MyUser/>
-
+   
     </StyledEngineProvider>
    
   </React.StrictMode>

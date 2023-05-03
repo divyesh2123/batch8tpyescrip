@@ -6,7 +6,7 @@ export default function Item(props : IProudctProps ) {
   return (
     <div>{props.index} {props.item1.category}
 
-      <Image url={props.item1.image} height='200px' alt='' />
+      <Image url={props.item1.image} height='200px' alt='' width='12'/>
     
     </div>
   )
