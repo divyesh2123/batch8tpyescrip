@@ -10,6 +10,7 @@ import MyUser from './MyUser';
 import { StyledEngineProvider } from '@mui/material/styles';
 import MyDisplay from './MyDisplay';
 import DisplayContact from './DisplayContact';
+import Employee from './pages/Employee';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,7 +18,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-    <DisplayContact />
+    <Employee />
    
     </StyledEngineProvider>
    
