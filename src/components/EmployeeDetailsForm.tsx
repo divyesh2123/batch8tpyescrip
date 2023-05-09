@@ -10,7 +10,7 @@ export default function EmployeeDetailsForm(d : IEmployeeProps) {
 
 
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement>)=> {
-    setData({...data,[e.target.value] : e.target.value})
+    setData({...data,[e.target.name] : e.target.value})
 
   }
 
@@ -21,7 +21,7 @@ export default function EmployeeDetailsForm(d : IEmployeeProps) {
     p.push(data);
    
 
-   let pd = d.setlist != undefined? d.setlist(p) : "";
+   let pd = d.setlist != undefined? d.setlist(data) : "";
     console.table(data);
   
    }
