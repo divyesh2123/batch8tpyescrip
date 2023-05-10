@@ -10,9 +10,9 @@ export default function EmployeeList(d: IEmployeeProps) {
     <table>
         
     {
-        d?.list?.map((value:IEmployee)=> {
+        d?.list?.map((value:IEmployee,index:number)=> {
 
-            return (<EmployeeDisplay {...value}></EmployeeDisplay>)
+            return (<EmployeeDisplay {...value} deleteindex={index} removeEmployee={d.remove} setEdit={d.setEdit} ></EmployeeDisplay>)
         })
     }
 

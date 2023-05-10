@@ -4,7 +4,13 @@ export interface IEmployeeProps
 {
     list : IEmployee[],
 
-    setlist?: Function
+    setlist?: Function,
+
+    remove?: Function,
+
+    setEdit?: Function,
+
+    ind? : number
 
 
 }

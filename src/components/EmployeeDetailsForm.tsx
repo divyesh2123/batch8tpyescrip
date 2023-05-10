@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IEmployee } from '../types/IEmployee'
 import { IEmployeeProps } from '../propsType/IEmployeeProps';
 
@@ -6,6 +6,13 @@ export default function EmployeeDetailsForm(d : IEmployeeProps) {
 
  const [data,setData] = useState<IEmployee>({address : "",
  city : "",fname : "",lname : "",state : "",zipcode : ""});
+
+
+ useEffect(()=> {
+
+  const ins = d.ind != null? d.ind : 0;
+  setData(d.list[ins]);
+ },[])
 
 
 
@@ -18,10 +25,18 @@ export default function EmployeeDetailsForm(d : IEmployeeProps) {
 
     event.preventDefault();
     let p = [...d.list];
-    p.push(data);
+    if(d.ind != null && d.ind  >=0)
+    {
+      p[d.ind] = data
+    }
+    else
+    {
+      
+      p.push(data);
+    }
    
 
-   let pd = d.setlist != undefined? d.setlist(data) : "";
+   let pd = d.setlist != undefined? d.setlist(p) : "";
     console.table(data);
   
    }
